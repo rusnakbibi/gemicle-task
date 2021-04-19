@@ -1,0 +1,17 @@
+<div class="unchecked-user">
+  <div class="cards-content">
+    <div class="img-content">
+      <img [src]="user.picture.large" alt="user-avatar">
+      <p class="user-id">{{user._id}}</p>
+    </div>
+    <div class="info-content">
+      <div class="info-user" (click)="selectedUser(user)">
+        <p class="user-name">{{user.name.first}}</p>
+        <p class="user-surname">{{user.name.last}}</p>
+      </div>
+      <div class="btn-container">
+        <button class="btn" [disabled]="checked" (click)="checkUser()">{{checked ? 'Checked User' : 'Unchecked user'}}</button>
+      </div>
+    </div>
+  </div>
+</div>

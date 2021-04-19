@@ -1,0 +1,53 @@
+@import "../style/variables.scss";
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+
+  &__header {
+    flex: 0 0 auto;
+    position: relative;
+    left: 0;
+    padding: 0;
+    width: 100vw;
+    z-index: 100;
+    &::after {
+      content: '';
+      position: absolute;
+      width: 150vw;
+      top: 80px;
+      left: -50vw;
+      border-bottom: 1px solid $greyExtraLight;
+      @media screen and (max-width: 770.98px) {
+        border-bottom: 0px
+       }
+    }
+  }
+
+  &__body {
+    flex: 1 0 auto;
+    margin-top: 80px;
+    margin: 0 auto;
+  }
+
+  &__footer {
+    margin-top: 35px;
+    flex: 0 0 auto;
+    position: relative;
+    left: 0;
+    padding: 0;
+    width: 100vw;
+    padding: 25px 0 15px 0;
+    z-index: 100;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 150vw;
+      top: 0;
+      left: -50vw;
+      border-bottom: 1px solid $greyExtraLight;
+    }
+  }
+}

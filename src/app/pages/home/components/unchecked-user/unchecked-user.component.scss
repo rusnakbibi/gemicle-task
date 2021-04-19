@@ -1,0 +1,72 @@
+@import 'variables';
+
+.unchecked-user {
+  display: flex;
+  font-family: $interRegular;
+  margin: 10px;
+  border: 1px solid $darkMedium;
+  border-radius: 4px;
+}
+
+.cards-content {
+  display: flex;
+  width: 400px;
+  padding: 5px;
+  justify-content: space-between;
+
+  .img-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: contain;
+    }
+
+    .user-id {
+      padding-top: 10px;
+      font-family: $interBold;
+      font-size: 16px;
+    }
+  }
+  .info-content {
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+    cursor: pointer;
+
+    .info-user {
+      display: flex;
+      font-family: $interSemiBold;
+      .user-name {
+        padding-right: 5px;
+      }
+    }
+
+    button {
+      &.btn {
+        background-color: #2BB473;
+        border-radius: 4px;
+        border: none;
+        color: #ffffff;
+        display: block;
+        height: 40px;
+        width: 150px;
+        font-size: 14px;
+        font-weight: bold;
+        letter-spacing: -0.07px;
+        line-height: 20px;
+    
+        &:focus {
+          box-shadow: none;
+        }
+      }
+  
+      &.checked {
+        background-color: $secondary-color;
+      }
+    }
+  }
+}

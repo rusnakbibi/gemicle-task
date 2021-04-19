@@ -1,0 +1,9 @@
+<section class="placeholder">
+  <div class="placeholder__img">
+    <img [src]="image ? image :'/assets/icons/placeholder.svg'">
+  </div>
+  <div class="placeholder__text">
+    <p>{{text}}</p>
+    <p *ngIf="subText">{{subText}}</p>
+  </div>
+</section>
