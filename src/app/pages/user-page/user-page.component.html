@@ -1,0 +1,31 @@
+<div class="user-page" *ngIf="user">
+  <div class="user-content">
+    <div class="img-content">
+      <img [src]="user.picture.large" alt="user-avatar">
+    </div>
+    <div class="info-content">
+      <div class="info-user">
+        <div class="info-block">
+          <h3 class="block-header">User Location</h3>
+          <p class="block-item">Country: {{user.location.country}}</p>
+          <p class="block-item"> City: {{user.location.city}}</p>
+          <p class="block-item">State: {{user.location.state}}</p>
+          <p class="block-item">Street: {{user.location.street.name}}</p>
+        </div>
+        <div class="info-block">
+          <h3 class="block-header">User Contacts</h3>
+          <p class="block-item">Email: {{user.email}}</p>
+          <p class="block-item">Phone: {{user.phone}}</p>
+        </div>
+        <div class="info-block">
+          <h3 class="block-header">User Gender</h3>
+          <p class="block-item">{{user.gender}}</p>
+        </div>
+        <div class="info-block">
+          <h3 class="block-header">User's date of birth</h3>
+          <p class="block-item">{{user.dob.date | date:'fullDate'}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,43 @@
+<div class="home-page">
+  <mat-tab-group [selectedIndex]="0" (selectedIndexChange)="changeIndexTab($event)">
+    <mat-tab label="Unchecked">
+      <section class="mt-3">
+        <ng-container *ngIf="uncheckedUser.length; else noUncheckedUserData">
+          <div class="form-controls">
+            <input type="text" placeholder="Search post..." [(ngModel)]="searchValue">
+          </div>
+          <div class="unchecked-user">
+            <app-unchecked-user *ngFor="let item of uncheckedUser | search:searchValue;" [user]="item" (selectUser)="handlerSelect($event)" (checkedUser)="handlerCheck($event)">
+            </app-unchecked-user>
+          </div>
+          <button class="btn" (click)="loadMore()">Get More</button>
+        </ng-container>
+        <ng-template #noUncheckedUserData>
+          <section class="w-100 mb-2">
+            <app-placeholder text="There are no data to display.">
+            </app-placeholder>
+          </section>
+        </ng-template>
+      </section>
+    </mat-tab>
+    <mat-tab label="Checked">
+      <section class="mt-3">
+        <ng-container *ngIf="checkedUser.length; else noCheckedUserData">
+          <div class="form-controls">
+            <input type="text" placeholder="Search post..." [(ngModel)]="searchValue">
+          </div>
+          <div class="checked-user">
+            <app-checked-user *ngFor="let item of checkedUser | search:searchValue;" [user]="item" (selectUser)="handlerSelect($event)">
+            </app-checked-user>
+          </div>
+        </ng-container>
+        <ng-template #noCheckedUserData>
+          <section class="w-100 mb-2">
+            <app-placeholder text="There are no data to display.">
+            </app-placeholder>
+          </section>
+        </ng-template>
+      </section>
+    </mat-tab>
+  </mat-tab-group>
+</div>

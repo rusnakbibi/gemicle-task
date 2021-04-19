@@ -1,0 +1,38 @@
+@import "variables";
+
+.user-page {
+  margin-top: 50px;
+  padding: 40px;
+  max-width: 900px;
+  width: 100%;
+
+  .user-content{
+    display: flex;
+  }
+
+  .img-content {
+    img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: contain;
+    }
+  }
+
+  .info-content {
+    padding-left: 45px;
+
+
+    .block-header {
+      color: $blue;
+      font-family: $interSemiBold;
+      font-size: 24px;
+    }
+
+    .block-item {
+      font-family: $interRegular;
+      color: $colorTextDark;
+      font-size: 18px;
+    }
+  }
+}

@@ -1,0 +1,35 @@
+@import "variables";
+
+.header-container{
+  max-width: 1260px;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+
+  .btn {
+    display: flex;
+    align-items: center;
+    span {
+      padding-top: 2.5px ;
+    }
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+}
+.header {
+  background-color: $white;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+
+

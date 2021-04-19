@@ -1,0 +1,7 @@
+<header class="header">
+  <div class="header-container">
+    <h1>{{date | async | date:'HH:mm:ss'}}</h1>
+    <button class="btn btn-link" *ngIf="!isHome()" (click)="goBack()"><mat-icon>reply</mat-icon> <span>Back</span></button>
+    <h2>{{appService.counter}}</h2>
+  </div>
+</header>

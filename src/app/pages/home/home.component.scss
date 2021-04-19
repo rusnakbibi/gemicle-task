@@ -1,0 +1,39 @@
+.home-page {
+  max-width: 1500px;
+  width: 100%;
+  margin: 0 auto;
+
+  .unchecked-user {
+    display: flex;
+    max-width: 1800px;
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .checked-user {
+    display: flex;
+    max-width: 1800px;
+    width: 100%;
+    flex-wrap: wrap;
+    margin: 0 auto;
+  }
+
+  .btn {
+    margin-left: 10px;
+    background-color: #2BB473;
+    border-radius: 4px;
+    border: none;
+    color: #ffffff;
+    display: block;
+    height: 40px;
+    width: 100px;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: -0.07px;
+    line-height: 20px;
+
+    &:focus {
+      box-shadow: none;
+    }
+  }
+}
